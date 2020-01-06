@@ -11,7 +11,7 @@ EOM
 
 
 export FILE=test 
-env
+
 /scripts/entrypoint.sh
 
 RESULT=$?
