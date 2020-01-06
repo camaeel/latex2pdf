@@ -1,0 +1,5 @@
+sut:
+    build: .
+    # image: latex2pdf
+    entrypoint: /scripts/run_tests.sh
+

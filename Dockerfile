@@ -15,7 +15,7 @@ RUN mkdir /scripts && \
     mkdir /output && \
     chown 1100:1100 /output    
 
-ADD scripts/* /scripts
+ADD scripts/* /scripts/
 
 RUN chmod a+x /scripts/*.sh 
 
