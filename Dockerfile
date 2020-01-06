@@ -8,14 +8,14 @@ RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y texlive-full texlive-fonts-extra
 
-RUN RUN mkdir /scripts && \
+RUN mkdir /scripts && \
     chown 1100:1100 /scripts && \
     mkdir /input && \
     chown 1100:1100 /input && \
     mkdir /output && \
     chown 1100:1100 /output    
 
-ADD scripts /scripts
+ADD scripts/* /scripts
 
 RUN chmod a+x /scripts/*.sh 
 
@@ -24,5 +24,5 @@ VOLUME [ "/input", "/output" ]
 USER 1100
 WORKDIR /input
 
-ENTRYPOINT [ "/entrypoint.sh" ] 
+ENTRYPOINT [ "/scripts/entrypoint.sh" ] 
 
