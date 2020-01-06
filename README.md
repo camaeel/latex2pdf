@@ -2,7 +2,7 @@
 Image contains latex tools and provides easy way to render tex files to pdf
 
 
-#Usage
+# Usage
 
 In order to convert tex files you should provide to volumes: 
 - input 
