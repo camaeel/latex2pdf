@@ -22,7 +22,7 @@ RUN chmod a+x /scripts/*.sh
 VOLUME [ "/input", "/output" ]
 
 USER 1100
-WORKDIR /input
+WORKDIR /scripts
 
 ENTRYPOINT [ "/scripts/entrypoint.sh" ] 
 

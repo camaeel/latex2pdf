@@ -4,15 +4,11 @@
 cat > "/input/test.tex" <<- EOM
 \documentclass{article}
 \begin{document}
-First document. This is a simple example, with no 
-extra parameters or packages included.
+First document. This is a test example
 \end{document}
 EOM
 
-
-export FILE=test 
-
-/scripts/entrypoint.sh
+/scripts/entrypoint.sh '/input/test.tex'
 
 RESULT=$?
 
@@ -22,7 +18,7 @@ else
   exit $RESULT
 fi
 
-if [ ! -f "/output/$FILE.pdf" ]; then 
+if [ ! -f "/output/test.pdf" ]; then 
     exit -1
 fi
 
