@@ -4,7 +4,7 @@ Image contains latex tools and provides easy way to render tex files to pdf
 
 # Usage
 
-In order to convert tex files you should provide to volumes: 
+In order to convert tex files you should provide two volumes: 
 - input 
 - output
 and provide as command (parameter for entrypoint) input tex file path. 

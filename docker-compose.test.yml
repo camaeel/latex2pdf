@@ -1,4 +1,7 @@
-sut:
+version: "3"
+
+services:
+  test:
     build: .
     # image: latex2pdf
     entrypoint: /scripts/run_tests.sh
