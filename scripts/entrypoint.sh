@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ $# -ne ]; then
+if [ $# -ne 1 ]; then
   echo "Missing parameter path to tex file"
   exit -1
 fi

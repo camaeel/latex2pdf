@@ -6,14 +6,15 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apt-get update && \
     apt-get upgrade -y && \
-    apt-get install -y texlive-full texlive-fonts-extra
+    apt-get install -y --no-install-recommends texlive-latex-extra texlive-fonts-extra texlive-fonts-recommended latexmk texlive-lang-polish && \
+    rm -rf /var/lib/apt/lists/*
 
 RUN mkdir /scripts && \
     chown 1100:1100 /scripts && \
     mkdir /input && \
     chown 1100:1100 /input && \
     mkdir /output && \
-    chown 1100:1100 /output    
+    chown 1100:1100 /output
 
 ADD scripts/* /scripts/
 
