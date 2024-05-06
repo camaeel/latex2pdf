@@ -1,6 +1,9 @@
 # latex2pdf
 Image contains latex tools and provides easy way to render tex files to pdf
 
+PROJECT NO LONGER MAINTAINED. 
+
+I switched my builds to image: [reitzig/texlive-base](https://hub.docker.com/r/reitzig/texlive-base).
 
 # Usage
 
